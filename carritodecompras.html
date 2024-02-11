@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./Css/carrito.css">
+	<link rel="stylesheet" href="./Css/navbar.css"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+	<script src="./Js/jquery-3.7.1.min.js"></script>
+        <script src="./Js/carrito.js"></script>
+	<title>Carrito de Compras</title>
+</head>
+<body>
+	<ul>
+		<li><a href="./principal.html">Principal</a></li>
+		<li><a href="./BusqAdvan.html">Buqueda advanzada</a></li>
+		<li>
+		  <a href="#">Social &#x25BE;</a>
+		  <ul class="dropdown">
+		   <li><a href="./Perfil.html">Perfil</a></li>
+		   <li><a href="./EditarPerfil.html">Editar Perfil</a></li>
+		   <li><a href="./listadeseos.html">Lista de deseos</a></li>
+		   <li><a href="./chat.php">Chat</a></li>
+		   <li><a href="./historial.html">Historial</a></li>
+		  </ul>
+		  </li>
+		<li>
+		  <a href="#">Ventas &#x25BE;</a>
+		  <ul class="dropdown">
+		   <li><a href="./venta.html">Nueva venta</a></li>
+		   <li><a href="./AprobarProductos.html">Aprobar Productos</a></li>
+		   <li><a href="./Categorias.html">Crear categorias</a></li>
+		   <li><a href="./VentasVendedor.html">Mis ventas</a></li>
+		  </ul>
+		  </li>
+		  <li><a href="./utilidades/CerrarSesion.php">Salir</a></li>
+		  <li>
+		   <div class="buscar">
+		   <input type="text" placeholder="Buscar" required />
+	 
+		   <div class="btn">
+			 <i class="fas fa-search icon"></i>
+		   </div>
+		 </div>
+	   </li>
+		
+	 </ul>
+	
+	<!--<div id= "paypal-button-container"></div>-->
+
+
+	<main class="contenedor">
+        <article>
+        <div id="carrito" style="text-align: center; text-transform: uppercase;">
+            <h2>CARRITO</h2>
+			<ul id="lista-productos">
+                <li class="producto">
+                    <img src="./img/imagenpendiente" alt="Producto-1">
+                    <p>NOMBRE</p>
+                    <p>$</p>
+					<button class = "botonBorrar" id = "0">Borrar</button>
+                </li>
+
+                <!-- <li class="producto">
+                    <input type="checkbox" name="producto-2" id="producto-2">
+                    <img src="./img/imagenpendiente" alt="Producto-2">
+                    <p>NOMBRE</p>
+                    <p>$</p>
+                </li> -->
+            </ul>
+
+            <button id="btn-compra" onclick="redireccionar()">Compra</button>
+            <!-- <button id="btn-eliminar" onclick="eliminarProducto()">Eliminar</button> -->
+        </div>
+        </article>
+	</main>
+	
+	<script>
+		function redireccionar() {
+			window.location.href = "metodopago.php";
+		}
+	
+		function eliminarProducto() {
+			// Obtener el producto seleccionado
+			var productoSeleccionado = document.querySelector("input[name='producto-1']:checked");
+	
+			// Si no hay producto seleccionado, no hacer nada
+			if (!productoSeleccionado) {
+				return;
+			}
+	
+			// Eliminar el producto de la lista
+			var listaProductos = document.querySelector("#lista-productos");
+			listaProductos.removeChild(productoSeleccionado.parentNode);
+		}
+	</script>
+	
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+	<script src="./Js/compras.js"></script>
+	<script src="https://www.paypal.com/sdk/js?client-id=AZZmol0kpp7NEJjRcDJ7lbeexIZ3grt4oKTWrP1A0lhJVyzBm-k8WIUNQ9Dp9OGOPT3LdhZ4w7y3cj&currency=MXN"></script>
+	<script src="buron.js"></script>
+
+</body>
+</html>

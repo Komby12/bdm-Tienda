@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <script src="./Js/jquery-3.7.1.min.js"></script>
+       
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./Css/login.css" media="screen" />
+        <script src="./Js/jquery-3.7.1.min.js"></script>
+        <script src="./Js/login.js"></script>
+        <title>Login</title>
+    </head>
+    <body>
+       
+<div class="container">
+    <div class="header">
+        <h2>Iniciar sesion</h2>
+    </div>
+    <form id="form" class="form">
+
+        <div class="icono-perfil-container">
+            <img class="icono-perfil" src="../../resources/usuario.png">
+        </div>
+       
+        <div class="form-control">
+            <label for="username">Usuario</label>
+            <input type="text" placeholder="Usuario" id="username" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+                
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        
+        
+        <button type = "button" id="botonSubir">Iniciar Sesion</button>
+        <a href="../Registro/registro.html">No tienes cuenta? Registrarte aqui</a>
+
+    </form>
+</div>
+
+
+
+</body>
+
+
+</html>

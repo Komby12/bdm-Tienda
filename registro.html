@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+        <link rel="stylesheet" type="text/css" href="./Css/registro.css" media="screen" />
+        <script src="./Js/jquery-3.7.1.min.js"></script>
+        <script src="./Js/registrar.js"></script>
+    </head>
+    <body>
+<div class="container">
+    <div class="header">
+        <h2>Crear cuenta</h2>
+    </div>
+    <form id="form" class="form" action="php/UsuarioRegistrar.php" method="POST">
+
+       
+        <div class="form-control">
+            <label for="username">Usuario</label>
+            <input type="text" placeholder="Usuario" id="username" name="username"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Ejemplo@gmail.com" id="email" name="email"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+
+        
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" name="password"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        
+        <div class="form-control">
+            <label for="password2">Repetir password</label>
+            <input type="password" placeholder="Password dos" id="password2"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+            <label for="username">Rol</label>
+            <select id="role" name="role" class="input-field" required>
+                <option value="1">Comprador</option>
+                <option value="2">Vendedor</option>
+            </select>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+            <label for="username">Nombre</label>
+            <input  type="text" id="name" name="name" class="input-field" placeholder="Nombre"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+    
+        <div class="form-control">
+            <label class="titulo-control" for="fechaNa">Fecha nacimiento</label>
+            <input required class="control" id="birthdate" name="birthdate" type="date" />
+            <label id="formato-aviso-fecha-nacimiento"></label>
+        </div>
+        <div class="form-control">
+            <label class="titulo-control">Imagen de perfil</label>
+            <input type="text" id="foto" name="foto">
+            <!--<input class="control-imagen-perfil" id="imagen-perfil" accept="image/png, image/jpg, image/jpeg" name="imagen-perfil" type="file" />
+            <label id="imagen-perfil-fake" class="input-file__btn"  for="imagen-perfil">Selecciona una imagen de perfil</label>
+            <img id="imagen-perfil-prev" class="texto-perfil-fake" src="" alt="Imagen prev"> -->
+        </div>
+        <div class="form-control">
+            <label class="titulo-control" for="fechaNa">Sexo</label>
+            <input type="radio" id="male" name="gender" value="H" required checked>
+            <label for="male">Masculino</label>
+            <input type="radio" id="female" name="gender" value="M" required>
+            <label for="female">Femenino</label>
+        </div>
+
+        <div class="form-control">
+            <label class="titulo-control" for="fechaNa">Privacidad</label>
+            <input type="radio" id="private" name="privacy" value="0" required>
+            <label for="male">Privado</label>
+            <input type="radio" id="public" name="privacy" value="1" required checked>
+            <label for="female">Publico</label>
+        </div>
+
+        <button type="button" id="botonSubir">Submit</button>
+    </form>
+</div>
+</body>
+</html>

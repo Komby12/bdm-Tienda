@@ -1,0 +1,121 @@
+
+<html lang="en">
+
+
+<head>
+    <title>Perfil</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./Css/Perfil.css">
+	<link rel="stylesheet" href="./Css/navbar.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+	<script src="./Js/jquery-3.7.1.min.js"></script>
+<script src="./Js/PerfilVen.js"></script>
+
+</head>
+
+<ul>
+	<li><a href="./principal.html">Principal</a></li>
+	<li><a href="./BusqAdvan.html">Buqueda advanzada</a></li>
+	<li>
+	  <a href="#">Social &#x25BE;</a>
+	  <ul class="dropdown">
+	   <li><a href="./Perfil.html">Perfil</a></li>
+	   <li><a href="./EditarPerfil.html">Editar Perfil</a></li>
+	   <li><a href="./listadeseos.html">Lista de deseos</a></li>
+	   <li><a href="./chat.php">Chat</a></li>
+	   <li><a href="./historial.html">Historial</a></li>
+	  </ul>
+	  </li>
+	<li>
+	  <a href="#">Ventas &#x25BE;</a>
+	  <ul class="dropdown">
+	   <li><a href="./venta.html">Nueva venta</a></li>
+	   <li><a href="./AprobarProductos.html">Aprobar Productos</a></li>
+	   <li><a href="./Categorias.html">Crear categorias</a></li>
+	   <li><a href="./VentasVendedor.html">Mis ventas</a></li>
+	  </ul>
+	  </li>
+	  <li><a href="./utilidades/CerrarSesion.php">Salir</a></li>
+	  <li>
+	   <div class="buscar">
+	   <input type="text" placeholder="Buscar" required />
+ 
+	   <div class="btn">
+		 <i class="fas fa-search icon"></i>
+	   </div>
+	 </div>
+   </li>
+	
+ </ul>
+
+<body class="bodycolor">
+
+           <div class="col py-3">  <!--                 -Contenido de la pagina...                 -->
+
+
+        <div class="container-perfil">
+            <div class="row">
+            <div class="col-4">
+                
+<img id = "Imagen" src="Gato.png" alt="Foto_perfil" height="200px"  weight="90px"></img>
+
+            </div>
+            <div class="col-8">
+               <h1 id = "inputUsuario">Nombre de usuario</h1>
+
+               <table>
+<tr>
+
+
+<td><h4 id = "Email" align="right" style="color:rgb(73, 73, 73)">Correo@elec.com</h4></td>
+
+</tr>
+
+
+               </table>
+
+               <td><Button class="button-Mensaje" onclick="window.location.href='./chat.html'">Mensaje</Button></td>
+			   <td><Button class="button-Lista" onclick="window.location.href='./listaAgena.html'">Listas</Button></td>
+                
+            </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+<section class="contenido">
+<tabla id = "TablaProductos">
+	<thead>
+		<tr>
+		  <th>Producto</th>
+		  <th>Descripcion</th>
+		  <th>Precio</th>
+		</tr>
+	  </thead>
+</tabla>
+</section>
+
+
+
+    
+</body>
+
+
+
+</html>

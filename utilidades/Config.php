@@ -1,0 +1,4 @@
+<?php
+const CLIENT_ID = "ATWaaZbf2E1RykYChTMFiBPUa-sY-5sP3Rxc5YZFcMY8qnGRH0SC0poiCN8PBUnVreGPjWtcGNmK5cb9";
+const MONEDA = "USD";
+?>
