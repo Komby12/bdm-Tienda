@@ -1,9 +1,9 @@
 <?php
     class DB{
-        private $servername="localhost";
+        private $servername="127.0.0.1";
         private $username="root";
         private $password="";
-        private $dbname="bdmamazon";
+        private $dbname="bdm";
         private $charset = "utf8mb4";
         function conectar(){
             try{

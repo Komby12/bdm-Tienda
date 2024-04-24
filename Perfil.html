@@ -1,29 +1,36 @@
-
+<!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-    <title>Perfil</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./Css/Perfil.css">
-    <link rel="stylesheet" href="./Css/navbar.css"> 
-
+  <head>
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./Js/jquery-3.7.1.min.js"></script>
-        <script src="./Js/perfil.js"></script>
+    <link rel="stylesheet" href="./Css/navbar.css">
+    <link rel="stylesheet" href="./Css/Perfil.css">
+    <title>Perfil</title>
+    
+    <script src="./Js/perfil.js"></script>
+    <!-- Font Awesone -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+       <!-- Bootstrap CSS -->
+       <link
+       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+       rel="stylesheet"
+     />
+  </head>
 
-
-
-</head>
-
-<body class="bodycolor">
-
-  <ul>
-		<li><a href="./principal.html">Principal</a></li>
-		<li><a href="./BusqAdvan.html">Buqueda advanzada</a></li>
-		<li>
-		  <a href="#">Social &#x25BE;</a>
+<body>
+  <ul class="primario">
+		<li ><a href="./principal.html">Principal</a></li>
+		<li><a href="./BusqAdvan.html">Búsqueda avanzada</a></li>
+		<li class="Adropdown">
+      <a href="#">Social &#x25BE;</a>
 		  <ul class="dropdown">
 		   <li><a href="./Perfil.html">Perfil</a></li>
 		   <li><a href="./EditarPerfil.html">Editar Perfil</a></li>
@@ -31,8 +38,9 @@
 		   <li><a href="./chat.php">Chat</a></li>
 		   <li><a href="./historial.html">Historial</a></li>
 		  </ul>
-		  </li>
-		<li>
+		</li>
+
+		<li class="Adropdown">
 		  <a href="#">Ventas &#x25BE;</a>
 		  <ul class="dropdown">
 		   <li><a href="./venta.html">Nueva venta</a></li>
@@ -40,104 +48,53 @@
 		   <li><a href="./Categorias.html">Crear categorias</a></li>
 		   <li><a href="./VentasVendedor.html">Mis ventas</a></li>
 		  </ul>
-		  </li>
-		  <li><a href="./utilidades/CerrarSesion.php">Salir</a></li>
-		  <li>
+		</li>
+
+		<li>
+      <a href="./utilidades/CerrarSesion.php">Salir</a></li>
+		<li>
 		   <div class="buscar">
 		   <input type="text" placeholder="Buscar" required />
-	 
-		   <div class="btn">
-			 <i class="fas fa-search icon"></i>
-		   </div>
-		 </div>
-	   </li>
-		
-	 </ul>
-
-
-
-      <!--FINAL DE LA NAVBAR-->
-      <div class="container-fluid" >
-        <div class="row flex-nowrap">
-          <div class="col-auto col-md-1 col-xl-2 px-sm-1 px-0 bg-dark">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100" style="height: auto">
-                
-
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                      
-                      <li><img src="Gato.png" alt="Foto_perfil" height="200px"  weight="90px"></img>
-                      </li>
-
-                      <li>
-
-
-                        <a href="./principal.html" class="nav-link px-0" style="color:aliceblue"> Pagina principal <span class="d-none d-sm-inline"><!--JJ: Poner aqui texto cuando diseñemos los logos--></span></a>
-                    </li>
-
-                    <li>
-                      <a href="./listadeseos.html" class="nav-link px-0" style="color:aliceblue"> Lista de deseos <span class="d-none d-sm-inline"></span></a>
-                   </li>
-
-                  <li>
-                    <a href="./EditarPerfil.html" class="nav-link px-0" style="color:aliceblue"> Editar perfil <span class="d-none d-sm-inline"></span></a>
-                </li>
-
-                <li>                              <hr>
-                    
-                  <a href="./carritodecompras.html" class="nav-link px-0" style="color:aliceblue"> Carrito de compra <span class="d-none d-sm-inline"></span></a> 
-                </li>
-
-                <li>                              <hr>
-                    
-                  <a href="./ProdutVen.html "class="nav-link px-0" style="color:aliceblue"> Mis productos <span class="d-none d-sm-inline"></span></a> 
-                </li>
-
-                    </ul>
-                    
-                    
-          </div>
-
-
-          
+		   <div class="btnn">
+        <i class="fas fa-search icon"></i>
         </div>
-
-            <div class="col py-3">  <!--                 -Contenido de la pagina...                 -->
-
-
+		 </div>
+	  </li>
+	</ul>
+      <!--FINAL DE LA NAVBAR-->
+      <div class="row" >
+        <aside class="col-md-2 sidebar">
+          <h1>Mi Menú</h1>
+            <ul>   
+              <div class="icono-perfil-container"> 
+                <img class="icono-perfil" id="Imagen2"></img>
+              </div>
+              <li><a href="./principal.html"> Página principal</a></li>
+              <li><a href="./listadeseos.html"> Lista de deseos</span></a></li>
+              <li><a href="./EditarPerfil.html"> Editar perfil</span></a></li>
+              <li><a href="./carritodecompras.html"> Carrito de compra</a></li>
+              <li><a href="./ProdutVen.html "> Mis productos</a></li>
+            </ul>
+        </aside>
+<!--                 -Contenido de la pagina...                 -->
+      <div class="col py-3">  
         <div class="container-perfil">
             <div class="row">
-            <div class="col-4">
-                
-<img src="Gato.png" alt="Foto_perfil" height="200px"  weight="90px" id = "Imagen"></img>
-
-            </div>
-            <div class="col-8">
+              <div class="col-4">
+                <img  alt="Foto_perfil" height="200px"  weight="90px" id="Imagen">
+              </div>
+              <div class="col-8">
                <h1 id = "Usuario"></h1>
-
                <table>
                   <tr>
-
-
                   <td><h4 align="right" style="color:rgb(73, 73, 73)" id="Email"></h4></td>
-
                   </tr>
-
-
                </table>
-
                <td><Button class="button-Mensaje" onclick="window.location.href='./chat.html'">Mensaje</Button></td>
-                
+              </div>
             </div>
-            </div>
+          </div>
         </div>
-
-        
-    </div>
-</div>
-       
-
-    
-</body>
-
-
+      </div> 
+  </body>
 </html>

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" type="text/css" href="./Css/registro.css" media="screen" />
-    <script src="./Js/jquery-3.7.1.min.js"></script>
-    <script src="./Js/registrar.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bdm-Tienda/Css/registro.css" media="screen" />
+    <script src="../bdm-Tienda/Js/jquery-3.7.1.min.js"></script>
+    <script src="../bdm-Tienda/Js/registrar.js"></script>
 </head>
 <body>
     <div class="background">

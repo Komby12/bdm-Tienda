@@ -3,8 +3,8 @@ $(document).ready(function(){
         var usuario = $("#Usuario").val();
 	    var nombre = $("#Nombre").val();
         var contrasena = $("#Contrasena").val();
-        var contrasena2 = $("#Contrasena2").val();
-	    var imagen = $("#Imagen").val();
+        var contrasena2 = $("#Contrasena2").val();        
+        var imagen = $('#Imagen')[0].files[0];
 
         if(usuario == "" || nombre == "" || contrasena == "" || imagen == "")
         {
@@ -22,19 +22,27 @@ $(document).ready(function(){
         console.log(contrasena);
         console.log(imagen);
 
-        $.ajax({
-            type: "post",
-            url:"./php/UsuarioModificar.php",
-            data: {"Usuario": usuario, "Nombre": nombre, "Contrasena": contrasena,  "Imagen": imagen},
-            success: function(){
-                alert(" Modificado!");
-                cargarUsuario();
-            },
-            error: function(err) {
-                console.log("AJAX error in request: " + JSON.stringify(err, null, 2));
-                alert("Error al modificar usuario.");
-            }
-        });
+        var reader = new FileReader();
+        reader.onload = function(event){
+            var imagenBase64 = event.target.result;
+
+            $.ajax({
+                type: "post",
+                url:"./php/UsuarioModificar.php",
+                data: {"Usuario": usuario, "Nombre": nombre, "Contrasena": contrasena,  "Imagen": imagenBase64},
+                success: function(){
+                    alert(" Modificado!");
+                    cargarUsuario();
+                },
+                error: function(err) {
+                    console.log("AJAX error in request: " + JSON.stringify(err, null, 2));
+                    alert("Error al modificar usuario.");
+                }
+            });
+        }
+        reader.readAsDataURL(imagen);
+
+        
     });
 
     cargarUsuario();
@@ -56,12 +64,11 @@ $(document).ready(function(){
                 console.log(data);
                 for (var i = 0; i < data.length; i++)
                 {
-                console.log(data[i].Nombre);
 
                 $("#Usuario").val(data[i].Usuario);
                 $("#Nombre").val(data[i].Nombre);
                 $("#Contrasena").val(data[i].Contrasena);
-                $("#Imagen").val(data[i].Imagen);
+                //$("#Imagen").val(data[i].Imagen);
                 }
             },
             error: function(err) {

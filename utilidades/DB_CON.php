@@ -2,9 +2,9 @@
     class db {
         static public function connect() {
             $host = "localhost";
-            $db = "dbmamazon";
+            $db = "bdm";
             $user = "root";
-            $pass = "";
+            $pass = "admin";
             try {
                 $mysqli = new mysqli($host,$user,$pass,$db);
                 if ($mysqli->connect_errno) {

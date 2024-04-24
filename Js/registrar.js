@@ -6,24 +6,16 @@ $(document).ready(function(){
         var contrasena = $('#password').val();
         var correo = $('#email').val();
         var fecha = $('#birthdate').val();
-        var sexo = "H";
         var rol = $('#role').val();
-        var imagen = $('#foto').val();
-        var publico = 0;
-        if($('#public').is(":checked"))
-        {
-            publico = 1;
-        }
-        if($('#female').is(":checked"))
-        {
-            sexo = "M";
-        }
+        var sex = $('#sex').val();
+        var privacy = $('#privacy').val();
+        var imagen = $('#foto')[0].files[0];
         console.log("Usuario: " + usuario);
         console.log("Nom: " + nombre);
         console.log("Contra: " + contrasena);
         console.log("Correo: " + correo);
         console.log("Fecha: " + fecha);
-        console.log("sexo: " + sexo);
+        console.log("sexo: " + sex);
         console.log("rol: " + rol);
         console.log("imagen: " + imagen);
         if(usuario.length < 3){
@@ -60,21 +52,30 @@ $(document).ready(function(){
             return;
         }
 
-        $.ajax({
-            type: "post",
-            url:"./php/UsuarioRegistrar.php",
-            data: {"username": usuario, "name": nombre, "password": contrasena, 
-            "email": correo, "birthdate": fecha, "gender": sexo,
-            "role": rol, "foto": imagen, "privacy": publico},
-            success: function(){
-                alert("Usuario creado!");
-                window.location.href='login.html';
-            },
-            error: function(err) {
-                console.log("AJAX error in request: " + JSON.stringify(err, null, 2));
-                alert("Error al crear usuario, intente de nuevo.");
-            }
-        });
+        var reader = new FileReader();
+        reader.onload = function(event){
+            //var imagenBytes = new Uint8Array(event.target.result);
+            var imagenBase64 = event.target.result;
+
+            $.ajax({
+                type: "post",
+                url:"./php/UsuarioRegistrar.php",
+                data: {"username": usuario, "name": nombre, "password": contrasena, 
+                "email": correo, "birthdate": fecha, "gender": sex,
+                "role": rol, "foto": imagenBase64, "privacy": privacy},
+                success: function(){
+                    alert("Usuario creado!");
+                    window.location.href='login.html';
+                },
+                error: function(err) {
+                    console.log("AJAX error in request: " + JSON.stringify(err, null, 2));
+                    alert("Error al crear usuario, intente de nuevo.");
+                }
+            });
+
+        }
+        reader.readAsDataURL(imagen);
+        
     });
 
     function isEmail(email) {

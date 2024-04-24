@@ -1,6 +1,7 @@
 <?php
 //session_start();
     include_once '../utilidades/DB.php';
+
     
     $Cor = $_POST['email'];
     $Usu = $_POST['username'];
@@ -14,9 +15,15 @@
 
     $response = array();
 
+ 
     crearUsuarios($Usu, $Nom, $Con, $Cor, $Img, $Sex, $Nac, $Rol, $Pri);
+    
+    echo json_encode($response);
 
-        function crearUsuarios($Usur, $Nomb, $Cont, $Corr, $Img, $Sex, $Nac, $Rol, $Pr){
+   
+
+        function crearUsuarios($Usur, $Nomb, $Cont, $Corr, $Img, $Sex, $Nac, $Rol, $Pr)
+        {     
             $DB = new DB();
             $q = "CALL sp_UsuarioInsert('$Usur', '$Nomb', '$Cont', '$Nac', '$Corr', '$Img', '$Sex', '$Pr' ,'$Rol');";
             $query =  $DB->conectar()->query($q);
