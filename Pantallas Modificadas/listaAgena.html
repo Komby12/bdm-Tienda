@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/styles.css" />
+    <link rel="stylesheet" href="./Css/navbar.css" />
+    <script src="./Js/jquery-3.7.1.min.js"></script>
+
+    <script src="./Js/jquery-3.7.1.min.js"></script>
+    <script src="./Js/listaAgena.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Lista de Deseos</title>
+  </head>
+  <body>
+    <ul class="primario">
+      <li><a href="./principal.html">Principal</a></li>
+      <li><a href="./BusqAdvan.html">Búsqueda avanzada</a></li>
+      <li class="Adropdown">
+        <a href="#">Social &#x25BE;</a>
+        <ul class="dropdown">
+          <li><a href="./Perfil.html">Perfil</a></li>
+          <li><a href="./EditarPerfil.html">Editar Perfil</a></li>
+          <li><a href="./listadeseos.html">Lista de deseos</a></li>
+          <li><a href="./chat.php">Chat</a></li>
+          <li><a href="./historial.html">Historial</a></li>
+        </ul>
+      </li>
+
+      <li class="Adropdown">
+        <a href="#">Ventas &#x25BE;</a>
+        <ul class="dropdown">
+          <li><a href="./venta.html">Nueva venta</a></li>
+          <li><a href="./AprobarProductos.html">Aprobar Productos</a></li>
+          <li><a href="./Categorias.html">Crear categorias</a></li>
+          <li><a href="./VentasVendedor.html">Mis ventas</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="./utilidades/CerrarSesion.php">Salir</a>
+      </li>
+      <li>
+        <div class="buscar">
+          <input type="text" placeholder="Buscar" required />
+          <div class="btnn">
+            <i class="fas fa-search icon"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="container">
+      <h1>Lista de Deseos</h1>
+      <div id="areaCrearLista">
+        <h3>Crear lista</h3>
+        <label>Nombre: </label>
+        <input type="text" id="inputNombre" />
+        <label>Descripcion: </label>
+        <input type="text" id="inputDescripcion" /><br /><br />
+        <label>Publico: </label>
+        <input type="checkbox" id="inputPublico" /><br /><br />
+        <button id="botonAgregar" type="button" class="btn btn-primary">
+          Agregar
+        </button>
+      </div>
+      <br />
+      <div id="product-list" class="product-list">
+        <!-- Aquí se cargarán los productos desde JavaScript -->
+      </div>
+      <!-- Dentro del div con la clase "product", agrega los botones "Comprar" y "Eliminar" -->
+      <div class="product">
+        <img src="product1.jpg" alt="Producto 1" />
+        <h3>Producto 1</h3>
+        <p>$19.99</p>
+		<button type="button" class="btn btn-outline-success">Comprar</button>
+		<button type="button" class="btn btn-outline-danger">Eliminar</button>
+      </div>
+      <!-- Repite la estructura anterior para cada producto -->
+      <div class="product">
+        <!-- Contenido del segundo producto -->
+      </div>
+      <!-- Repite la estructura para los demás productos -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+.contenedor {
+	margin: auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
+main article {
+	background: #fff;
+	margin: 20px 0;
+	padding: 20px;
+	height: 1000px;
+}
+
+/* Estilos para la tabla de cotización */
+.cotizacion-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cotizacion-table th,
+.cotizacion-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.cotizacion-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.cotizacion-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cotizacion-total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.botones-cotizacion {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.botones-cotizacion button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #E47911;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.botones-cotizacion button:hover {
+    background-color: #ff9500;
+}

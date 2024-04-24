@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./Css/EditP.css" media="screen" />
+        <link rel="stylesheet" href="./Css/navbar.css"> 
+        <script src="./Js/jquery-3.7.1.min.js"></script>
+        <script src="./Js/editarPerfil.js"></script>
+
+         <!-- FontAwesome CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+	<title>Cotizacion</title>
+</head>
+    <body>
+        
+        <ul class="primario">
+            <li><a href="./principal.html">Principal</a></li>
+            <li><a href="./BusqAdvan.html">Búsqueda avanzada</a></li>
+            <li class="Adropdown">
+              <a href="#">Social &#x25BE;</a>
+              <ul class="dropdown">
+                <li><a href="./Perfil.html">Perfil</a></li>
+                <li><a href="./EditarPerfil.html">Editar Perfil</a></li>
+                <li><a href="./listadeseos.html">Lista de deseos</a></li>
+                <li><a href="./chat.php">Chat</a></li>
+                <li><a href="./historial.html">Historial</a></li>
+              </ul>
+            </li>
+      
+            <li class="Adropdown">
+              <a href="#">Ventas &#x25BE;</a>
+              <ul class="dropdown">
+                <li><a href="./venta.html">Nueva venta</a></li>
+                <li><a href="./AprobarProductos.html">Aprobar Productos</a></li>
+                <li><a href="./Categorias.html">Crear categorias</a></li>
+                <li><a href="./VentasVendedor.html">Mis ventas</a></li>
+              </ul>
+            </li>
+      
+            <li>
+              <a href="./utilidades/CerrarSesion.php">Salir</a>
+            </li>
+            <li>
+              <div class="buscar">
+                <input type="text" placeholder="Buscar" required />
+                <div class="btnn">
+                  <i class="fas fa-search icon"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+<div class="container">
+    <div class="header">
+        <h2 class="text-white">Editar Perfil</h2>
+    </div>
+    <form id="form" class="form">
+        <div class="form-control">
+            <label for="username">Usuario</label>
+            <input type="text" placeholder="Usuario" id="Usuario" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        
+            <label for="email">Nombre</label>
+            <input type="email" placeholder="Ejemplo@gmail.com" id="Nombre" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="Contrasena"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+       
+            <label for="password2">Repetir password</label>
+            <input type="password" placeholder="Password dos" id="Contrasena2"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        
+            <label class="titulo-control">Imagen de perfil</label>
+            <input type="text" placeholder="Imagen.jpg" id="Imagen" />
+        <div>
+        <!--<button type = "button" id="botonSubir">EDITAR</button>-->
+        <button type="button" id="botonSubir" class="btn btn-primary">EDITAR</button>
+    </form>
+</div>
+<!-- <script src="./EditP.js"></script> -->
+</body>
+</html>
