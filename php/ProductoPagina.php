@@ -21,6 +21,7 @@ session_start();
                 $lista[$numero]['Existencia'] = $ObjetoLista['Existencia'];
                 $lista[$numero]['Cotizar'] = $ObjetoLista['Cotizar'];
                 $lista[$numero]['Usuario'] = $ObjetoLista['Usuario'];
+                $lista[$numero]['Imagen'] = $ObjetoLista['Imagen'];
                 $numero++;
             }
             echo json_encode($lista);

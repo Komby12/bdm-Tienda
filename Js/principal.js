@@ -22,6 +22,7 @@ $(document).ready(function(){
                         '<td>' + data[i].Nombre +
                         '</td><td>' + data[i].Precio +
                         '</td><td>' + data[i].Calificacion +
+                        '</td><td><img src='+ data[i].Imagen+' height="10%" width="10%">'+
                         '</td></tr>');
                 }
             },

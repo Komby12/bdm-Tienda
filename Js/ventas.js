@@ -1,10 +1,12 @@
 $(document).ready(function(){
     $("#botonSubir").click(function(){
+        alert("Entre");
         var nombre = $("#Nombre").val()
 	    var descripcion = $("#Descripcion").val()
         var precio = $("#Precio").val()
 	    var existencias = $("#Existencias").val()
         var categoria = $("#Categorias").val()
+        var imagen = $('#fotoProducto')[0].files[0];
 	    var cotizar = 0;
         if($("#Cotizar").is(":checked"))
         {
@@ -17,20 +19,27 @@ $(document).ready(function(){
             return;
         }
 
-        $.ajax({
-            type: "post",
-            url:"./php/ProductoCrear.php",
-            data: {"Nombre": nombre, "Descripcion": descripcion, "Precio": precio, 
-            "Existencia": existencias, "Cotizacion": cotizar, "ID_Categoria": categoria},
-            success: function(){
-                alert("Producto creado!");
-                window.location.href='principal.html';
-            },
-            error: function(err) {
-                console.log("AJAX error in request: " + JSON.stringify(err, null, 2));
-                alert("Error al crear usuario, intente de nuevo.");
-            }
-        });
+        var reader = new FileReader();
+        reader.onload = function(event){
+            var imagenBase64 = event.target.result;
+
+            $.ajax({
+                type: "post",
+                url:"./php/ProductoCrear.php",
+                data: {"Nombre": nombre, "Descripcion": descripcion, "Precio": precio, 
+                "Existencia": existencias, "Cotizacion": cotizar, 'Imagen': imagenBase64,
+                 "ID_Categoria": categoria},
+                success: function(){
+                    alert("Producto creado!");
+                    window.location.href='principal.html';
+                },
+                error: function(err) {
+                    console.log("AJAX error in request: " + JSON.stringify(err, null, 2));
+                    alert("Error al crear usuario, intente de nuevo.");
+                }
+            });
+        }  
+        reader.readAsDataURL(imagen);     
 
     });
 

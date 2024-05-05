@@ -18,6 +18,7 @@ session_start();
                 $lista[$numero]['Categoria'] = $ObjetoLista['Categoria'];
                 $lista[$numero]['Calificacion'] = $ObjetoLista['Calificacion'];
                 $lista[$numero]['Vendedor'] = $ObjetoLista['Vendedor'];
+                $lista[$numero]['Imagen'] = $ObjetoLista['Imagen'];
                 $numero++;
             }
             echo json_encode($lista);
