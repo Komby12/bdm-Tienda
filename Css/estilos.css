@@ -2,16 +2,19 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Georgia, serif; /* Cambio de fuente a Georgia (serif) */
+	font-family: Georgia, serif;
+	/* Cambio de fuente a Georgia (serif) */
 }
 
 body {
-	background: #26416b; /* Color principal de fondo */
+	background: #26416b;
+	/* Color principal de fondo */
 }
 
 a {
 	text-decoration: none;
-	color: #30435f; /* Color de enlaces */
+	color: #30435f;
+	/* Color de enlaces */
 }
 
 .contenedor {
@@ -53,7 +56,7 @@ main article {
 }
 
 .menu .contenedor-botones-menu button:hover {
-	border: 1px solid rgba(255,255,255, .4);
+	border: 1px solid rgba(255, 255, 255, .4);
 }
 
 .menu .contenedor-botones-menu .btn-menu-cerrar {
@@ -88,7 +91,7 @@ main article {
 }
 
 .menu .btn-departamentos:hover {
-	border: 1px solid rgba(255,255,255, .4);
+	border: 1px solid rgba(255, 255, 255, .4);
 }
 
 .menu .btn-departamentos span {
@@ -106,7 +109,7 @@ main article {
 }
 
 .menu .contenedor-enlaces-nav .enlaces a:hover {
-	border: 1px solid rgba(255,255,255,.4);
+	border: 1px solid rgba(255, 255, 255, .4);
 }
 
 /* ------------------------- */
@@ -143,9 +146,9 @@ main article {
 	left: 65px;
 }
 
-.grid > div {
+.grid>div {
 	background: #fff;
-	box-shadow: 0px 3px 6px rgba(0,0,0,.10);
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, .10);
 }
 
 /* ------------------------- */
@@ -397,7 +400,7 @@ main article {
 
 
 
-.TablaDiseño{
+.TablaDiseño {
 
 	background-color: #fff;
 	width: 100%;
@@ -405,7 +408,9 @@ main article {
 	text-align: left;
 }
 
-th, tr, th{
-padding: 20;
+th,
+tr,
+th {
+	padding: 20;
 
 }
