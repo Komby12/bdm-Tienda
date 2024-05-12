@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" type="text/css" href="../bdm-Tienda/Css/registro.css" media="screen" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./Css/registro.css"
+      media="screen"
+    />
+    <link href="./Css/login.css" rel="stylesheet" />
     <script src="../bdm-Tienda/Js/jquery-3.7.1.min.js"></script>
     <script src="../bdm-Tienda/Js/registrar.js"></script>
+     
+    
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
 </head>
 <body>
-    <div class="background">
-        <div class="registration-container">
-            <h2>Registro</h2>
+    <div class="container">
+        <div class="contain">
+            <h2>Crear cuenta</h2>
             <form class = "form" id="registration-form" method="POST" action="php/UsuarioRegistrar.php" enctype="multipart/form-data">
                 <label class="input-label" for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" class="input-field" placeholder="Correo Electrónico" required>

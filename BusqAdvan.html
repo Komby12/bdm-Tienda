@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./Css/navbar.css">
-  <link rel="stylesheet" href="./Css/BusqAdvan.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./Css/navbar.css" />
+  <link rel="stylesheet" href="./Css/BusqAdvan.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -15,15 +15,17 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="./Js/jquery-3.7.1.min.js"></script>
   <script src="./Js/busquedaproductos.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <title>Busqueda</title>
 </head>
 
 <body>
-  <ul>
+  <ul class="primario">
     <li><a href="./principal.html">Principal</a></li>
-    <li><a href="./BusqAdvan.html">Buqueda advanzada</a></li>
-    <li>
+    <li><a href="./BusqAdvan.html">Búsqueda avanzada</a></li>
+    <li class="Adropdown">
       <a href="#">Social &#x25BE;</a>
       <ul class="dropdown">
         <li><a href="./Perfil.html">Perfil</a></li>
@@ -33,7 +35,8 @@
         <li><a href="./historial.html">Historial</a></li>
       </ul>
     </li>
-    <li>
+
+    <li class="Adropdown">
       <a href="#">Ventas &#x25BE;</a>
       <ul class="dropdown">
         <li><a href="./venta.html">Nueva venta</a></li>
@@ -42,63 +45,62 @@
         <li><a href="./VentasVendedor.html">Mis ventas</a></li>
       </ul>
     </li>
-    <li><a href="./utilidades/CerrarSesion.php">Salir</a></li>
+
+    <li>
+      <a href="./utilidades/CerrarSesion.php">Salir</a>
+    </li>
     <li>
       <div class="buscar">
         <input type="text" placeholder="Buscar" required />
-
-        <div class="btn">
+        <div class="btnn">
           <i class="fas fa-search icon"></i>
         </div>
       </div>
     </li>
-
   </ul>
 
   <div class="container">
     <div class="header">
-      <h2>Busqueda</h2>
+      <h2>Búsqueda Avanzada</h2>
     </div>
 
     <div>
       <form id="form" class="formb">
-
-
-
         <div class="form-control">
           <label for="Descripcion">Nombre</label>
           <input type="text" placeholder="¿Que buscas?" id="BarraBuscar" />
-
         </div>
 
         <div class="form-control">
-          <label for="filtro">Filtro:</label>
-          <input type="radio" name="filtro" id="radioNormal" checked>
-          <label for="radioNormal">Sin filtro</label>
-          <input type="radio" name="filtro" id="radioMayorPrecio">
-          <label for="radioMayorPrecio">Mayor precio</label>
-          <input type="radio" name="filtro" id="radioMenorPrecio">
-          <label for="radioMenorPrecio">Menor precio</label>
-          <input type="radio" name="filtro" id="radioMejorEvaluacion">
-          <label for="radioMejorEvaluacion">Mejor evaluacion</label>
+          <h4 for="filtro">Filtro:</h4>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filtro" id="radioNormal" checked>
+            <label class="form-check-label texto" for="radioNormal">Sin filtro</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filtro" id="radioMayorPrecio">
+            <label class="form-check-label texto" for="radioMayorPrecio">Mayor precio</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filtro" id="radioMenorPrecio">
+            <label class="form-check-label texto" for="radioMenorPrecio">Menor precio</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="filtro" id="radioMejorEvaluacion">
+            <label class="form-check-label texto" for="radioMejorEvaluacion">Mejor evaluacion</label>
+               
+          </div>
         </div>
 
-
-        <button type="button" class="botonbusqueda">Buscar</button>
-
-
+        <!--<button type="button" class="botonbusqueda">Buscar</button>-->
+        <button type="button" class="btn btn-primary mt-3" style="width: 150px;">Buscar</button>
       </form>
-
-
     </div>
-
-
   </div>
 
-
-  <div>
-    <h2 class="Titulo">Resultados encontrados:</h2>
-    <table style="width:100%" id="TablaProductos">
+  <div class="resultado">
+    <h2 class="Titulo mt-4">Resultados encontrados:</h2>
+    <table style="width: 100%" id="TablaProductos">
       <tr>
         <th>Nombre</th>
         <th>Precio</th>
@@ -160,14 +162,7 @@
     </div>
                 
             </form> -->
-
-
   </div>
-
-
-
-
-
 </body>
 
 </html>

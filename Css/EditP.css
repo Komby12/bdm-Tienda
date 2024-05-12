@@ -1,33 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
 
-* {
-	box-sizing: border-box;
-}
-
-body {
-	background-color: #f2e6cf;
-	font-family: 'Open Sans', sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	margin: 0;
-}
-
 .container {
-	background-color: #9cd2d3;
+	margin-top: 20px;
+	background-color: #07283a;
 	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
-	width: 400px;
+	width: 700px;
 	max-width: 100%;
+	height: 510px;
 }
 
 .header {
-	border-bottom: 1px solid #9cd2d3;
-	background-color: #9cd2d3;
-	padding: 20px 40px;
+	border-bottom: 1px solid #07283a;
+	background-color: #07283a;
+	padding: 10px 40px;
 }
 
 .header h2 {
@@ -35,12 +22,12 @@ body {
 }
 
 .form {
-	padding: 30px 40px;	
+	padding: 5px 20px;
 }
 
 .form-control {
-	margin-bottom: 10px;
-	padding-bottom: 20px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
 	position: relative;
 }
 
@@ -99,17 +86,4 @@ body {
 
 .form-control.error small {
 	visibility: visible;
-}
-
-.form button {
-	background-color: #114c5f;
-	border: 2px solid #114c5f;
-	border-radius: 4px;
-	color: #fff;
-	display: block;
-	font-family: inherit;
-	font-size: 16px;
-	padding: 10px;
-	margin-top: 20px;
-	width: 100%;
 }

@@ -1,41 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+.contain {
+	width: 800px;
+	height: 520px;
+	margin: 10vh auto 0 auto;
+	padding: 20px;
+	background-color: rgba(99, 98, 98, 0.76);
+	border-radius: 15px;
+	font-size: 12px;
 
-* {
-	box-sizing: border-box;
-}
-
-body {
-	background-color: #26416b;
-	font-family: 'Open Sans', sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	margin: 0;
-}
-
-.container {
-	background-color: #9cd2d3;
-	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	overflow: hidden;
-	width: 400px;
-	max-width: 100%;
-}
-
-.header {
-	border-bottom: 1px solid #9cd2d3;
-	background-color: #9cd2d3;
-	padding: 20px 40px;
-}
-
-.header h2 {
-	margin: 0;
 }
 
 .form {
-	padding: 30px 40px;	
+	padding: 30px 40px;
 }
 
 .form-control {
@@ -112,4 +87,8 @@ body {
 	padding: 10px;
 	margin-top: 20px;
 	width: 100%;
+}
+
+.small-height {
+	height: 50px;
 }

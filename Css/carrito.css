@@ -1,17 +1,6 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: Georgia, serif; /* Cambio de fuente a Georgia (serif) */
-}
-
-body {
-	background: #26416b; /* Color principal de fondo */
-}
-
-a {
+/*a {
 	text-decoration: none;
-	color: #30435f; /* Color de enlaces */
+	color: #30435f;
 }
 
 .contenedor {
@@ -27,9 +16,6 @@ main article {
 	height: 1000px;
 }
 
-/* ------------------------- */
-/* Enlaces del NAV */
-/* ------------------------- */
 .menu {
 	background: #232F3E;
 	padding: 5px 0;
@@ -37,7 +23,6 @@ main article {
 }
 
 .menu .contenedor-botones-menu {
-	/* display: flex; */
 	display: none;
 	justify-content: space-between;
 }
@@ -109,9 +94,6 @@ main article {
 	border: 1px solid rgba(255,255,255,.4);
 }
 
-/* ------------------------- */
-/* GRID */
-/* ------------------------- */
 .contenedor-grid {
 	position: relative;
 }
@@ -147,11 +129,11 @@ main article {
 	background: #fff;
 	box-shadow: 0px 3px 6px rgba(0,0,0,.10);
 }
-
+*/
 /* ------------------------- */
 /* Categorias */
 /* ------------------------- */
-
+/*
 .grid .btn-regresar {
 	background: #232F3E;
 	color: #fff;
@@ -200,9 +182,6 @@ main article {
 	display: inline-block;
 }
 
-/* ------------------------- */
-/* Subcategorias */
-/* ------------------------- */
 
 .grid .contenedor-subcategorias {
 	grid-area: subcategorias;
@@ -267,9 +246,6 @@ main article {
 	height: 50%;
 }
 
-/* ------------------------- */
-/* Mediaqueies */
-/* ------------------------- */
 @media screen and (max-width: 1000px) {
 	.menu .contenedor-enlaces-nav {
 		padding: 0 10px;
@@ -393,4 +369,8 @@ main article {
 		width: 25%;
 		height: 100%;
 	}
+}*/
+
+.resultado {
+	margin: 40px;
 }
