@@ -28,43 +28,60 @@ session_start();
 	<script src="./Js/pagoCotizacion.js"></script>
 	<script src="https://www.paypal.com/sdk/js?client-id=<?php echo CLIENT_ID; ?>&currency=USD"></script>
 
+    <link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+	integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+  />
+
+  <!-- Bootstrap CSS -->
+  <link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+  />
+
+
 	<title>Metodo de Pago</title>
 </head>
 <body>
-<ul>
-     <li><a href="./principal.html">Principal</a></li>
-     <li><a href="./BusqAdvan.html">Buqueda advanzada</a></li>
-     <li>
-       <a href="#">Social &#x25BE;</a>
-       <ul class="dropdown">
-        <li><a href="./Perfil.html">Perfil</a></li>
-        <li><a href="./EditarPerfil.html">Editar Perfil</a></li>
-        <li><a href="./listadeseos.html">Lista de deseos</a></li>
-        <li><a href="./chat.php">Chat</a></li>
-        <li><a href="./historial.html">Historial</a></li>
-       </ul>
-       </li>
-     <li>
-       <a href="#">Ventas &#x25BE;</a>
-       <ul class="dropdown">
-        <li><a href="./venta.html">Nueva venta</a></li>
-        <li><a href="./AprobarProductos.html">Aprobar Productos</a></li>
-        <li><a href="./Categorias.html">Crear categorias</a></li>
-        <li><a href="./VentasVendedor.html">Mis ventas</a></li>
-       </ul>
-       </li>
-       <li><a href="./utilidades/CerrarSesion.php">Salir</a></li>
-       <li>
-        <div class="buscar">
-        <input type="text" placeholder="Buscar" required />
-  
-        <div class="btn">
-          <i class="fas fa-search icon"></i>
-        </div>
-      </div>
-    </li>
-     
-  </ul>
+<ul class="primario">
+		<li><a href="./principal.html">Principal</a></li>
+		<li><a href="./BusqAdvan.html">Búsqueda avanzada</a></li>
+		<li class="Adropdown">
+			<a href="#">Social &#x25BE;</a>
+			<ul class="dropdown">
+				<li><a href="./Perfil.html">Perfil</a></li>
+				<li><a href="./EditarPerfil.html">Editar Perfil</a></li>
+				<li><a href="./listadeseos.html">Lista de deseos</a></li>
+				<li><a href="./chat.php">Chat</a></li>
+				<li><a href="./historial.html">Historial</a></li>
+			</ul>
+		</li>
+	
+		<li class="Adropdown">
+			<a href="#">Ventas &#x25BE;</a>
+			<ul class="dropdown">
+				<li><a href="./venta.html">Nueva venta</a></li>
+				<li><a href="./AprobarProductos.html">Aprobar Productos</a></li>
+				<li><a href="./Categorias.html">Crear categorias</a></li>
+				<li><a href="./VentasVendedor.html">Mis ventas</a></li>
+			</ul>
+		</li>
+	
+		<li>
+			<a href="./utilidades/CerrarSesion.php">Salir</a>
+		</li>
+		<li>
+			<div class="buscar">
+				<input type="text" placeholder="Buscar" required />
+				<div class="btnn">
+					<i class="fas fa-search icon"></i>
+				</div>
+			</div>
+		</li>
+	</ul>
 
 	<div id= "paypal-button-container"></div>
 
