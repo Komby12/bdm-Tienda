@@ -4,6 +4,7 @@ session_start();
     
     //$Busqueda = $_POST['Busqueda']
     $ID_Usu = $_SESSION['ID_Usuario'];
+    //$ID_Usu = $_POST['id'];
     //$Tipo = $_POST["Tipo"];
 
     getProductos($ID_Usu);

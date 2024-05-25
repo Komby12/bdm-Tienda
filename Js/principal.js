@@ -19,11 +19,10 @@ $(document).ready(function(){
                 {
                     $('#TablaProductos').append(
                         '<tr class = "rowProducto" id=' + data[i].ID_Producto + '>' +
-                        '<td>' + data[i].Nombre +
-                        '</td><td>' + data[i].Precio +
-                        '</td><td>' + data[i].Calificacion +
-                        '</td><td><img src='+ data[i].Imagen+' height="10%" width="10%">'+
-                        '</td></tr>');
+                        '<td><div class="product"><img src='+ data[i].Imagen+
+                        '><h3>' + data[i].Nombre + '</h3>' +
+                        '<p>' + data[i].Precio + '</p>' +
+                        '</div></td></tr>');
                 }
             },
             error: function(err) {
@@ -32,4 +31,21 @@ $(document).ready(function(){
             }
         });
     }
+
+    $(document).on('click','.rowProducto', function() {
+        var id = this.id;
+        console.log(id);
+        $.ajax({
+            type: "post",
+            url:"./utilidades/ElegirProducto.php",
+            data: {"ID": id},
+            success: function(){
+                window.location.href='producto.php';
+            },
+            error: function(err) {
+                console.log("AJAX error in request: " + JSON.stringify(err, null, 2));
+                alert("Error al modificar categoria.");
+            }
+        });
+    });
 })

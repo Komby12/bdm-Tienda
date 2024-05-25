@@ -94,7 +94,7 @@
 			<div class="input-container">
 			  <input type="text" id="message-input" placeholder="Escribe tu mensaje...">
 			  <label for="select-input">Producto a cotizar: </label>
-				<select id = "select-input"></select> <br>
+				<select id ="select-input"></select> <br>
 				<label for="cantidad-input">Cantidad: </label>
 			  <input type="number" id="cantidad-input" value = "0"><br>
 			  <label for="precio-input">Precio: </label>
